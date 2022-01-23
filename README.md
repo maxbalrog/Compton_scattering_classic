@@ -1,9 +1,9 @@
 # Compton_scattering_classic
 Repository for calculation of Compton emission spectra based on electron's trajectory (classical framework).
 
-Electron's velocity and coordinate   | Scattered spectrum
-:-------------------------:|:-------------------------:
-![](imgs/velocity.png) ![](imgs/coordinate.png)  |  ![](imgs/spectrum.png)
+Incident laser pulse  |   Electron's trajectories   | Scattered spectrum
+:-------------------------:|:-------------------------:|:-------------------------:
+![](imgs/laser_pulse.png)  |  ![](imgs/coordinate.png)  |  ![](imgs/spectrum.png)
 
 **ComptonSpec_classic.py** - classes necessary for computation
 
