@@ -9,16 +9,9 @@ from scipy.interpolate import interp1d
 
 '''
 Class structure:
-    --Laser_Impulse
-        --Trajectories
-        --Spectrum
-'''
-
-class Laser_Impulse:
-    
-    def __init__(self):
-        pass
-    
+    --Trajectory
+    --Spectrum
+''' 
 
 class Trajectory:
     '''
@@ -136,7 +129,7 @@ class Spectrum:
         assert n_t_points > 0, 'n_t_points should be > 0'
         t = np.linspace(-t0, t_end, n_t_points)
         
-        # Interpolation of \eta(t)
+        # Interpolation of eta(t)
         eta_interp = interp1d(t_eta_points, eta, kind='cubic')
         
         # Interpolation of trajectories: u_x(eta), x(eta), ...
@@ -188,7 +181,7 @@ class Spectrum:
         # Frequency in normilized over laser frequency w_L, radiation intensity is given in
         # dimensionless units, one needs to multiply it on e^2 * w_L to obtain values in ergs
         w = 2 * np.pi * f
-        I = np.abs(A_theta)**2 + np.abs(A_phi)**2
+        I = 2*(np.abs(A_theta)**2 + np.abs(A_phi)**2)
         
         return I, w
     
@@ -219,7 +212,7 @@ class Spectrum:
             
     
     def calc_spectrum_I_theta_w(self, theta_arr, phi=0, n_t=100, n_padded=10,
-                                interpolate_w=False, w_bound=None, fixed_length=True):
+                                interpolate_w=False, w_bound=[0.,3.], fixed_length=True):
         '''
         Calculate the Compton emission spectrum I(theta, w) (FFT in the retarded time) on given 
         angle theta grid and at given angle phi
