@@ -9,8 +9,8 @@ from scipy.interpolate import interp1d
 
 '''
 Class structure:
-    --Trajectory
-    --Spectrum
+    --class Trajectory
+    --class Spectrum
 ''' 
 
 class Trajectory:
