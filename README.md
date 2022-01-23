@@ -3,7 +3,7 @@ Repository for calculation of Compton emission spectra based on electron's traje
 
 Electron's velocity and coordinate   | Scattered spectrum
 :-------------------------:|:-------------------------:
-![](imgs/velocity.png)  |  ![](imgs/spectrum.png)
+![](imgs/velocity.png) ![](imgs/coordinate.png)  |  ![](imgs/spectrum.png)
 
 **ComptonSpec_classic.py** - classes necessary for computation
 
